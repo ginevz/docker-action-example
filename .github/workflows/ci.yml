@@ -13,10 +13,10 @@ jobs:
       uses: docker/setup-compose-action@v1
     - name: Build and run Docker Compose
       run: |
-        docker-compose up -d
+        docker compose up -d
     - name: Test
       run: |
-        curl --retry 10 --retry-connrefused http://localhost:8000
+        curl --retry 10 --retry-connrefused [invalid url, do not cite]
     - name: Clean up
       run: |
-        docker-compose down
+        docker compose down

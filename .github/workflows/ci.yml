@@ -16,7 +16,7 @@ jobs:
         docker compose up -d
     - name: Test
       run: |
-        curl --retry 10 --retry-connrefused [invalid url, do not cite]
+        curl --retry 10 --retry-connrefused http://localhost:8000
     - name: Clean up
       run: |
         docker compose down
